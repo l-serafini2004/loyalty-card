@@ -1,0 +1,268 @@
+/* Fonts */
+
+/*Bebas neue*/
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+/*Roboto*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+/*Rethink Sans*/
+@import url('https://fonts.googleapis.com/css2?family=Rethink+Sans:ital,wght@0,400..800;1,400..800&display=swap');
+
+/*Noto Sans Khojki*/
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Khojki&display=swap');
+
+/*Rubik*/
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+/*Noto Sans Tangsa*/
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Tangsa:wght@400..700&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+nav ul{
+    list-style-type: none;
+}
+
+nav ul li{
+    display: inline-block;
+}
+
+main{
+    margin: 2% 3%;
+}
+
+header{
+    display: grid;
+    margin: 5% 0;
+    grid-template-columns: 1fr 1fr;
+}
+
+header .write h1{
+    font-size: 80px;
+    font-family: "Bebas Neue", sans-serif;
+    letter-spacing: 1px;
+}
+
+
+/* Design della card */
+
+.card{
+    padding: 10% 0;
+}
+
+.card .example{
+    padding: 5px 20px;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    background: linear-gradient(270deg, red 60%, rgba(0, 0, 0, 0.8) 100%);
+    color: white;
+    width: 400px;
+    height: 230px;
+    border-radius: 10px;
+    margin: 30px auto;
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+    transition: 0.6s;
+    transition-timing-function: linear;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+
+.card h3{
+    text-align: center;
+    font-family: "Roboto", sans-serif;
+    font-size: 22px;
+}
+
+.example h4{
+    font-family: "Bebas Neue", sans-serif;
+    letter-spacing: 1px;
+    font-size: 25px;
+}
+
+.card .example:hover{
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+    transform: translateY(-10px) translateX(-5px);
+    cursor: pointer;
+}
+
+.write p{
+    font-size: 22px;
+    font-family: "Rethink Sans", sans-serif;
+}
+
+.bttns{
+    margin: 10% 0;
+}
+
+.bttns a{
+    display: inline-block;
+    text-decoration: none;
+    background-color: purple;
+    color: white;
+    padding: 15px 30px;
+
+    letter-spacing: 1px;
+    font-size: 20px;
+    font-family: "Bebas Neue", sans-serif;
+
+    transition: 0.6s;
+}
+
+.bttns p{
+    margin-right: 20px;
+    display: inline-block;
+    border: 3px solid purple;
+    width: auto;
+}
+
+.bttns a:hover{
+    transform: translate(6px, -7px);
+}
+
+
+/* Prezzi */
+
+.plans{
+    margin-bottom: 40px;
+    text-align: center;
+    letter-spacing: 1px;
+    font-size: 40px;
+    font-family: "Bebas Neue", sans-serif;
+}
+
+.prices{
+    display: flex;
+    justify-content: center;
+}
+
+.select-abb{
+    transition: 0.6s;
+    padding: 20px 20px;
+    width: 300px;
+    border: 1px solid rgba(128, 128, 128, 0.58);
+    border-radius: 2px;
+    margin: 0 20px;
+}
+
+.select-abb ul{
+    list-style-type: none;
+}
+
+.select-abb .srvc{
+    font-family: "Roboto", sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.select-abb hr{
+    margin: 10px 0;
+}
+
+.info-select h2{
+    font-size: 26px;
+    letter-spacing: 1px;
+    font-family: "Bebas Neue", sans-serif;
+}
+
+.info-select p{
+    color: grey;
+    font-family: "Noto Sans Khojki", sans-serif;
+}
+
+.price{
+    color: black;
+    font-size: 25px;
+}
+
+.price:after{
+    content: " €/month";
+    font-size: 18px;
+}
+
+.select-abb li{
+    margin: 10px 0;
+    font-family: "Roboto", sans-serif;
+}
+
+.info-select{
+    text-align: center;
+}
+
+.info-select a{
+    display: inline-block;
+    text-decoration: none;
+    background-color: rgba(30, 144, 255, 0.80);
+    color: white;
+    width: 80%;
+    padding: 20px;
+    margin:20px 0;
+    font-family: "Rubik", sans-serif;
+    font-weight: 600;
+    letter-spacing: 1px;
+    font-size: 18px;
+    transition: 0.4s;
+}
+
+.info-select a:hover{
+    background-color: dodgerblue;
+}
+
+.select-abb:hover{
+    border: 1px solid dodgerblue;
+    transform: translateY(-10px);
+}
+
+/*Descrizioni*/
+
+.descriptions{
+    margin: 5%;
+    font-family: "Roboto", sans-serif;
+    font-size: 18px;
+}
+
+.right{
+    text-align: right;
+}
+.right p{
+    margin-left: 60%;
+}
+
+.par{
+    margin: 2% 0;
+}
+
+.descriptions h2{
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 40px;
+}
+
+.descriptions p{
+    width: 40%;
+}
+
+/* Maps */
+.maps{
+    text-align: center;
+    margin: 5% 0;
+}
+
+.maps h2{
+    font-size: 35px;
+    margin-bottom: 20px;
+    font-family: "Noto Sans Tangsa", sans-serif;
+}
+
+.maps img{
+    width: 800px;
+}
+
+
