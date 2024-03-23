@@ -6,13 +6,8 @@
     <link rel="stylesheet" href="style/index.css">
 </head>
 <body>
-<nav>
-    <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Documentation</a></li>
-        <li><a href="#">Dashboard</a></li>
-    </ul>
-</nav>
+
+<x-navbar></x-navbar>
 <main>
     <header>
         <div class="write">
