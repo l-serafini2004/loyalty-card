@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Route;
 
 // Controllers
 use App\Http\Controllers\RegisterController;
-
+use App\Http\Controllers\SessionController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -20,6 +20,16 @@ Route::get('/', function () {
     return view('index');
 });
 
+Route::get('/manage', function (){
+    return view('manage');
+});
+
 // Register section
-Route::get('/register', [RegisterController::class, 'create']);
-Route::post('/register', [RegisterController::class, 'store']);
+Route::get('/register', [RegisterController::class, 'create'])->middleware('guest');
+Route::post('/register', [RegisterController::class, 'store'])->middleware('guest');
+
+
+// Session section
+Route::get('/login', [SessionController::class, 'create'])->middleware('guest');
+
+Route::post('/logout', [SessionController::class, 'destroy'])->middleware('auth');

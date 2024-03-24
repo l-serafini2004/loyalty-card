@@ -1,0 +1,88 @@
+
+/*Noto Sans Symbols*/
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Symbols:wght@100..900&display=swap');
+
+/*Assistant*/
+@import url('https://fonts.googleapis.com/css2?family=Assistant:wght@200..800&display=swap');
+
+/*Roboto*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+main{
+    margin: 3% 8%;
+}
+
+h1{
+    font-size: 50px;
+    font-family: "Noto Sans Symbols", sans-serif;
+}
+
+header p{
+    width: 50%;
+    font-size: 22px;
+    font-family: "Assistant", sans-serif;
+}
+
+header a{
+    transition: 0.4s;
+    text-decoration: none;
+    background-color: dodgerblue;
+    padding: 15px 30px;
+    font-size: 20px;
+    display: inline-block;
+    color: white;
+    margin: 20px 0;
+    border-radius: 10px;
+    font-family: "Roboto", sans-serif;
+}
+
+article{
+    margin: 4% 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+article h2{
+    font-size: 35px;
+    font-family: "Noto Sans Symbols", sans-serif;
+}
+
+article p{
+    font-family: "Assistant", sans-serif;
+    font-size: 18px;
+}
+
+article ul{
+    margin: 2% 0;
+    list-style-type: none;
+}
+
+article li{
+    margin: 1% 0;
+    font-size: 18px;
+}
+
+article li a{
+    color: dodgerblue;
+    font-family: "Assistant", sans-serif;
+}
+
+header a:hover{
+    background-color: #0068d7;
+}
+
+input[type='submit']{
+    background-color: transparent;
+    color: dodgerblue;
+    font-family: "Assistant", sans-serif;
+    text-decoration: underline;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+}
