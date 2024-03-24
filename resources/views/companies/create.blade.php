@@ -116,9 +116,9 @@
             <h2>Your cart</h2>
             <div class="paga">
                 <div class="cart-obj">
-                    <p class="price" id="price">3.99</p>
-                    <p class="title">Abbonamento</p>
-                    <p class="desc" id="plan">Premium Plan</p>
+                    <p class="price" id="price">0.00</p>
+                    <p class="title">Subscription</p>
+                    <p class="desc" id="plan">Free Plan</p>
                 </div>
                 <input type="submit" value="Buy">
                 <p class="spec">If you select the free plan you don't need to provide your card data</p>
