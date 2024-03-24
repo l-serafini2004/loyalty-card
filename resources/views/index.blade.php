@@ -137,7 +137,7 @@
             </ul>
         </div>
     </article>
-
+    <x-flash></x-flash>
 </main>
 <x-footer></x-footer>
 

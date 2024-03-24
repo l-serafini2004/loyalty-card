@@ -16,12 +16,12 @@ class RegisterController extends Controller
             'name' => 'required|max:255|min:1',
             'surname' => 'required|max:255|min:1',
             'phone_number',
-            'email' => 'required|email|unique: users,email',
+            'email' => 'required|email',
             'password' => 'required',
         ]);
 
         User::create($attributes);
 
-        return redirect('/');
+        return redirect('/')->with('success', 'Your account has been created');
     }
 }
