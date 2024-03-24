@@ -1,0 +1,165 @@
+
+/*Roboto*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+/*Allerta*/
+@import url('https://fonts.googleapis.com/css2?family=Allerta&display=swap');
+
+/*Bebas neue*/
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+/*Rethink Sans*/
+@import url('https://fonts.googleapis.com/css2?family=Rethink+Sans:ital,wght@0,400..800;1,400..800&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: whitesmoke;
+}
+
+main{
+
+    width: 60%;
+    display: block;
+    margin: 3% auto;
+}
+
+header{
+    text-align: center;
+    margin-bottom: 3%;
+}
+
+header p{
+    font-size: 22px;
+    color: grey;
+    font-family: "Rethink Sans", sans-serif;
+}
+
+form{
+    display: grid;
+    column-gap: 3%;
+    grid-template-columns: 1fr 1fr;
+}
+
+input, select{
+    font-family: "Roboto", sans-serif;
+    outline: none;
+    font-size: 18px;
+    padding: 10px;
+    width: 100%;
+    border: 1px solid grey;
+    border-radius: 5px;
+}
+
+.location{
+    display: flex;
+}
+
+.location div{
+    width: 100%;
+    margin-right: 10px;
+}
+
+label{
+    margin-bottom: 5px;
+    font-size: 18px;
+    font-family: "Roboto", sans-serif;
+    display: block;
+}
+
+.inp{
+    margin: 10px 0;
+}
+
+h1{
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 50px;
+}
+
+hr{
+    margin: 4% 0;
+}
+
+h2{
+    font-family: "Allerta", sans-serif;
+    margin-bottom: 15px;
+}
+
+.cart-obj{
+    background-color: white;
+    position: relative;
+    padding: 10px 20px;
+    font-family: "Roboto", sans-serif;
+    font-size: 18px;
+}
+
+.cart-obj .title{
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.cart-obj .desc{
+    color: grey;
+}
+
+.cart-obj .price{
+    position: absolute;
+    right: 20px;
+    top: 15px;
+}
+
+.cart-obj .price:after{
+    content: ' €';
+}
+
+input[type = submit]{
+    background-color: dodgerblue;
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 15px;
+    font-size: 22px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    border-radius: 0;
+    transition: 0.4s;
+}
+
+input[type = submit]:hover{
+    background-color: royalblue;
+}
+
+.paga{
+    width: 500px;
+}
+
+.bottom{
+    margin: 3% 0;
+    text-align: center;
+    font-family: "Roboto", sans-serif;
+    font-size: 18px;
+}
+
+.bottom p{
+    font-size: 20px;
+}
+
+.bottom ul{
+    list-style-type: none;
+}
+
+.bottom li{
+    display: inline-block;
+    margin: 5px;
+}
+
+
+.spec{
+    padding: 5px;
+    color: dimgrey;
+    font-family: "Roboto", sans-serif;
+}
