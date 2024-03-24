@@ -17,16 +17,12 @@
             Email
         </label>
         <input type="email" name="email">
-        @error('email')
-            <p class="error">{{$message}}</p>
-        @enderror
-
         <label>
             Password
         </label>
         <input type="password" name="password">
         @error('email')
-            <p class="error">{{$password}}</p>
+            <p class="error">{{$message}}</p>
         @enderror
 
         <input type="submit" value="Sign in">

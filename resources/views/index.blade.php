@@ -16,7 +16,7 @@
 
             <div class="bttns">
                 <p><a href="/register">Register</a></p>
-                <p><a href="#">Your activity</a></p>
+                <p><a href="/login">Your activity</a></p>
             </div>
 
         </div>

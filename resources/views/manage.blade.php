@@ -42,6 +42,7 @@
         </section>
         <span class="material-symbols-outlined"></span>
     </article>
+    <x-flash></x-flash>
 </main>
 </body>
 </html>
