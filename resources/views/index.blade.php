@@ -15,7 +15,7 @@
             <p>Where you can create your personalized Fidelity Card plan for your activity</p>
 
             <div class="bttns">
-                <p><a href="#">Register</a></p>
+                <p><a href="/register">Register</a></p>
                 <p><a href="#">Your activity</a></p>
             </div>
 
