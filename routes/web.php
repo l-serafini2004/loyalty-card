@@ -6,6 +6,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\SessionController;
 use App\Http\Controllers\CompanyController;
+use App\Http\Controllers\CardController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -42,4 +43,4 @@ Route::post('/join', [CompanyController::class, 'join'])->middleware('notconnect
 
 // Section to connected to app
 Route::get('/admin', [CompanyController::class, 'admin'])->middleware('connected');
-Route::get('/cards', [SessionController::class, 'show'])->middleware('connected');
+Route::get('/cards', [CardController::class, 'show'])->middleware('connected');
