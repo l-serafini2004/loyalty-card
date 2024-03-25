@@ -1,3 +1,17 @@
+// chiudi tutto
+const aside = document.getElementById('aclose');
+const close = document.getElementById('close');
+const altaside = document.getElementById('altaside');
+close.addEventListener('click', () =>{
+    aside.style.display = 'none';
+    altaside.style.display = 'block';
+})
+
+altaside.addEventListener('click', () => {
+    aside.style.display = 'block';
+    altaside.style.display = 'none';
+})
+
 const open1 = document.getElementById('open1');
 const opt1 = document.getElementById('opt1');
 
