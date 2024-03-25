@@ -1,0 +1,155 @@
+
+/*Bebas neue*/
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+/*Roboto*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+aside{
+    width: 15%;
+    background-color: #232323;
+    color: white;
+    padding: 20px;
+    height: 100vh;
+}
+
+aside h2{
+    font-family: "Bebas Neue", sans-serif;
+    letter-spacing: 2px;
+    font-size: 40px;
+}
+
+aside h2:after{
+    content: 'Sidebar';
+    display: block;
+    font-family: "Arial", sans-serif;
+    font-size: 16px;
+}
+
+aside .sect{
+    margin: 10px 0;
+    font-family: "Roboto", sans-serif;
+    font-size: 20px;
+}
+
+.sect h3{
+    font-weight: 500;
+}
+
+.sect ul{
+    list-style-type: none;
+    margin: 0 20px;
+}
+
+.sect li{
+    margin: 10px 0;
+}
+
+i{
+    font-size: 18px;
+    margin-right: 8px;
+    cursor: pointer;
+}
+
+.rotated{
+    transform: rotate(90deg);
+    animation-timing-function: linear;
+    animation-duration: 0.5s;
+    animation-name: rotatei;
+}
+
+@keyframes rotatei {
+    from{
+        transform: rotate(0);
+    }
+
+    to{
+        transform: rotate(90deg);
+    }
+
+}
+
+@keyframes sbianca {
+    from{
+        display: block;
+        height: 0;
+        opacity: 0;
+    }
+
+    to{
+        height: 100%;
+        opacity: 1;
+    }
+}
+
+.und{
+    display: none;
+}
+
+.open{
+    display: block;
+    animation: sbianca 0.5s linear;
+}
+
+.user-image img{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.user-image h3{
+    cursor: pointer;
+}
+
+.user-image{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    font-family: "Roboto", sans-serif;
+}
+
+.signout{
+    width: 200px;
+    position: absolute;
+    left: 25px;
+    bottom: 70px;
+    border-radius: 5px;
+    background-color: #414141;
+    display: none;
+}
+
+.signout p{
+    font-size: 18px;
+    cursor: pointer;
+    font-family: "Roboto", sans-serif;
+    padding: 10px 20px;
+}
+
+.signout input{
+    background-color: transparent;
+    border: none;
+    font-size: 18px;
+    color: white;
+    font-family: "Roboto", sans-serif;
+    padding: 10px 20px;
+    width: 100%;
+    text-align: left;
+}
+
+.signout p:hover, .signout input:hover{
+    background-color: dimgrey;
+    border-radius: 5px;
+    cursor: pointer;
+
+}

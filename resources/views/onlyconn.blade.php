@@ -1,1 +1,1 @@
-<h1>AUTH</h1>
+<x-aside></x-aside>
