@@ -18,7 +18,7 @@ abbonamento.addEventListener('change', () =>{
     let selectOption = abbonamento.options[abbonamento.selectedIndex];
 
     // Cambia i valori
-    prezzo.innerHTML = prices[parseInt(selectOption.getAttribute('value'))];
-    tipoAbb.innerHTML = plans[parseInt(selectOption.getAttribute('value'))];
+    prezzo.innerHTML = prices[parseInt(selectOption.getAttribute('id'))];
+    tipoAbb.innerHTML = plans[parseInt(selectOption.getAttribute('id'))];
 
 });

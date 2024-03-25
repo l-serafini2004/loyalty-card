@@ -14,7 +14,8 @@
     </header>
 
 
-    <form>
+    <form action="/create-company" method="post">
+        @csrf
         <div class="info">
             <div class="billing">
                 <h2>Shop information</h2>
@@ -22,40 +23,57 @@
                     <label>
                         Name
                     </label>
-                    <input type="text">
+                    <input type="text" name="company_name" value="{{old('name')}}">
                 </div>
+                @error('company_name')
+                    <p class="error">{{$message}}</p>
+                @enderror
                 <div class="inp">
                     <label>
                         Phone Number (Optional)
                     </label>
-                    <input type="text">
+                    <input type="tel" name="company_number" value="{{old('company_number')}}">
                 </div>
                 <div class="inp">
                     <label>
                         Email (of the activity)
                     </label>
-                    <input type="email" placeholder="account@myshop.com">
+                    <input type="email" name="email" placeholder="account@myshop.com" value="{{old('email')}}">
                 </div>
+                @error('email')
+                    <p class="error">{{$message}}</p>
+                @enderror
                 <div class="inp location">
                     <div>
                         <label>
                             State
                         </label>
-                        <input type="text">
+                        <input type="text" name="state" value="{{old('state')}}">
+                        @error('state')
+                        <p class="error">{{$message}}</p>
+                        @enderror
                     </div>
                     <div>
                         <label>
                             City
                         </label>
 
-                        <input type="text">
+                        <input type="text" name="city" value="{{old('city')}}">
+                        @error('city')
+                            <p class="error">{{$message}}</p>
+                        @enderror
                     </div>
+
                     <div>
                         <label>
                             Address
                         </label>
-                        <input type="text">
+                        <input type="text" name="address" value="{{old('address')}}">
+                        @error('address')
+                            <p class="error">{{$message}}</p>
+                        @enderror
                     </div>
+
                 </div>
 
                 <hr>
@@ -63,34 +81,43 @@
                 <h2>Account data</h2>
                 <div class="inp">
                     <label>
-                        Account code
+                        Account code (5 numbers)
                     </label>
-                    <input type="text">
+                    <input type="number" name="id" value="{{old('id')}}">
                 </div>
+                @error('id')
+                    <p class="error">{{$message}}</p>
+                @enderror
 
                 <div class="inp">
                     <label>
                         Superuser Password
                     </label>
-                    <input type="password">
+                    <input type="password" name="rootPassword">
                 </div>
+                @error('rootPassword')
+                    <p class="error">{{$message}}</p>
+                @enderror
 
                 <div class="inp">
                     <label>
                         Repeat password
                     </label>
-                    <input type="password">
+                    <input type="password" name="repeat">
                 </div>
+                @error('repeat')
+                    <p class="error">{{$message}}</p>
+                @enderror
 
                 <hr>
 
                 <h2>Payment</h2>
                 <div class="inp">
                     <label>Plan</label>
-                    <select id="tipoAbb">
-                        <option value="0">Free</option>
-                        <option value="1">Premium</option>
-                        <option value="2">Business</option>
+                    <select id="tipoAbb" name="plan">
+                        <option value="free" id="0">Free</option>
+                        <option value="premium" id="1">Premium</option>
+                        <option value="business" id="2">Business</option>
                     </select>
                 </div>
                 <div class="inp">

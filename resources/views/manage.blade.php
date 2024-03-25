@@ -14,7 +14,7 @@
             Now you must
             If you need some advices, you can check bottom in this page
         </p>
-        <a href="#">Sign up to your shop</a>
+        <a href="/admin">Sign up to your shop</a>
     </header>
     <article>
         <section>
@@ -22,6 +22,7 @@
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec pulvinar, elit id cursus mattis, risus ex feugiat justo, sed sollicitudin odio libero at sem. Fusce efficitur lobortis neque in bibendum. Phasellus sagittis dignissim scelerisque. </p>
             <ul>
                 <li><a href="/create-company">New Shop</a></li>
+                <li><a href="/join">Join a company</a></li>
                 <li><a href="#">APIs for your website</a></li>
                 <li><a href="#">Get the library</a></li>
             </ul>

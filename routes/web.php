@@ -25,11 +25,20 @@ Route::post('/register', [RegisterController::class, 'store'])->middleware('gues
 
 
 // Session section
-Route::get('/login', [SessionController::class, 'create'])->middleware('guest');
+Route::get('login', [SessionController::class, 'create'])->middleware('guest')->name('login');
 Route::post('/login', [SessionController::class, 'store'])->middleware('guest');
 
 Route::post('/logout', [SessionController::class, 'destroy'])->middleware('auth');
 
 
 // Company section
-Route::get('/create-company', [CompanyController::class, 'create'])->middleware('auth');
+Route::get('/create-company', [CompanyController::class, 'create'])->middleware('notconnect');
+Route::post('/create-company', [CompanyController::class, 'store'])->middleware('notconnect');
+
+
+// Connect your company
+Route::get('/join', [CompanyController::class, 'sign'])->middleware('notconnect');
+Route::post('/join', [CompanyController::class, 'join'])->middleware('notconnect');
+
+// Section to connected to app
+Route::get('/admin', [CompanyController::class, 'admin'])->middleware('connected');
