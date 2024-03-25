@@ -42,3 +42,4 @@ Route::post('/join', [CompanyController::class, 'join'])->middleware('notconnect
 
 // Section to connected to app
 Route::get('/admin', [CompanyController::class, 'admin'])->middleware('connected');
+Route::get('/cards', [SessionController::class, 'show'])->middleware('connected');

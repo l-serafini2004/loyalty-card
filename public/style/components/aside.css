@@ -12,8 +12,16 @@
     box-sizing: border-box;
 }
 
+body{
+    display: grid;
+    grid-template-columns: 15% 85%;
+}
+
+.main{
+    max-height: 100vh;
+}
+
 aside{
-    width: 15%;
     background-color: #232323;
     color: white;
     padding: 20px;
@@ -50,6 +58,11 @@ aside .sect{
 
 .sect li{
     margin: 10px 0;
+}
+
+.sect li a{
+    color: white;
+    text-decoration: none;
 }
 
 i{

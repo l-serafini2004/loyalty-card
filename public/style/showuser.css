@@ -1,0 +1,128 @@
+/*Roboto*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+/*Gabarito*/
+@import url('https://fonts.googleapis.com/css2?family=Gabarito:wght@400..900&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+main{
+    width: 100%;
+    overflow-y: scroll;
+    height: 100vh;
+}
+
+
+.database{
+    overflow: auto;
+    width: 80%;
+    height: 600px;
+    display: block;
+    margin: 0 auto 3%;
+    border: 1px solid black;
+}
+
+.database .row{
+    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+}
+
+.row p{
+    padding: 10px;
+    text-align: center;
+    font-family: "Roboto", sans-serif;
+}
+
+.top{
+    background-color: #e8e8e8;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: 1fr;
+    border-bottom: 1px solid black;
+}
+
+.top div{
+    border-right: 1px solid black;
+}
+
+form{
+    width: 80%;
+    margin: 20px auto;
+}
+
+.head-form{
+    border: 1px solid black;
+    border-bottom: none;
+    padding: 10px;
+    font-family: "Roboto", sans-serif;
+    font-size: 22px;
+}
+
+.search-row{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-gap: 10px;
+    padding: 20px 10px;
+    border: 1px solid black;
+    border-bottom: none;
+    text-align: center;
+}
+
+.search-row span{
+    font-size: 20px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    margin-right: 5px;
+}
+
+.search-row input, .search-row select{
+    font-size: 20px;
+    padding: 8px;
+    outline: none;
+    width: 300px;
+}
+
+.search-row select{
+    display: inline;
+}
+
+.bottoni{
+    padding: 10px;
+    border: 1px solid black;
+    border-top: none;
+    text-align: right;
+}
+
+.bottoni a{
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+    padding: 10px 20px;
+    border: 1px solid grey;
+    text-decoration: none;
+    color: black;
+    display: inline-block;
+}
+
+.bottoni input{
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: dodgerblue;
+    color: white;
+    border: none;
+}
+
+.top p{
+    font-family: "Roboto", sans-serif;
+    text-align: center;
+}

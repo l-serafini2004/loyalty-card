@@ -2,14 +2,18 @@
 const aside = document.getElementById('aclose');
 const close = document.getElementById('close');
 const altaside = document.getElementById('altaside');
+const asd = document.getElementById('aside');
+
 close.addEventListener('click', () =>{
     aside.style.display = 'none';
     altaside.style.display = 'block';
+    document.querySelector('body').style.display = 'block';
 })
 
 altaside.addEventListener('click', () => {
     aside.style.display = 'block';
     altaside.style.display = 'none';
+    document.querySelector('body').style.display = 'grid';
 })
 
 const open1 = document.getElementById('open1');

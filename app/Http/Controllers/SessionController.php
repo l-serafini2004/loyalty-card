@@ -39,4 +39,8 @@ class SessionController extends Controller
         ]);
     }
 
+    public function show(){
+        return view('cards.show');
+    }
+
 }

@@ -14,7 +14,7 @@
             <ul id="opt1" class="und">
                 <li>Create</li>
                 <li>Modify</li>
-                <li>Users</li>
+                <li><a href="/cards">Users</a></li>
             </ul>
         </div>
         <div class="sect">
