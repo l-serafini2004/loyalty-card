@@ -6,7 +6,7 @@ use App\Models\Card;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Validation\ValidationException;
-
+use App\Models\User;
 class CardController extends Controller
 {
     public function show(){
@@ -70,8 +70,9 @@ class CardController extends Controller
 
         // Considera tutte le carte che ci servono
 
+
         $cards = Card::query()
-            ->where('company_id', auth()->user()->company->id);
+            ->where('company_id', auth()->user()->company_id);
 
 
         return view('cards.update', [

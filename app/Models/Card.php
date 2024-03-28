@@ -15,8 +15,9 @@ class Card extends Model
         return $this->belongsTo(Company::class);
     }
 
-    public function customer(){
-        return $this->belongsTo(Customer::class);
+
+    public function associations(){
+        return $this->hasMany(Association::class);
     }
 
 }
