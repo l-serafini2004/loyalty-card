@@ -62,7 +62,20 @@ class CardController extends Controller
 
         Card::create($attributes);
 
-        return redirect('/admin')->with('success', 'Card created with success');
+        return redirect('/')->with('success', 'Card created with success');
 
+    }
+
+    public function modify(){
+
+        // Considera tutte le carte che ci servono
+
+        $cards = Card::query()
+            ->where('company_id', auth()->user()->company->id);
+
+
+        return view('cards.update', [
+            'cards' => $cards->get()
+        ]);
     }
 }

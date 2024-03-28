@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Card create</title>
     <link rel="stylesheet" href="../style/cardcreate.css">
 </head>
 <x-layout>
@@ -27,16 +27,16 @@
             <label >
                 Color of the card
             </label>
-            <input name="color" type="color" id="bg-color" class="inpt">
+            <input name="color" type="color" id="color" class="inpt">
             @error('color')
             <p class="error">{{$message}}</p>
             @enderror
         </div>
         <div class="inp">
             <label>
-                Color
+                Background color
             </label>
-            <input name="bgColor" type="color" id="color" class="inpt">
+            <input name="bgColor" type="color" id="bg-color" class="inpt">
             @error('bgColor')
                 <p class="error">{{$message}}</p>
             @enderror

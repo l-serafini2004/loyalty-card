@@ -12,7 +12,7 @@
             <h3><i id="open1" class="fa-solid fa-chevron-right"></i>Card</h3>
             <ul id="opt1" class="und">
                 <li><a href="/cards/create">Create</a></li>
-                <li>Modify</li>
+                <li><a href="/cards/update">Modify</a></li>
                 <li><a href="/cards">Users</a></li>
             </ul>
         </div>
