@@ -78,4 +78,14 @@ class CardController extends Controller
             'cards' => $cards->get()
         ]);
     }
+
+    public function delete(){
+
+        Card::findOrFail( request()->input('idToRemove'))->delete();
+
+
+        return redirect('/cards/update');
+
+    }
+
 }

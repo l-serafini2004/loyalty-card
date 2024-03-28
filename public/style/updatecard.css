@@ -38,3 +38,67 @@
     margin: 5px 0;
 }
 
+.delete{
+    color: red;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+
+.deleteSection{
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    width: 500px;
+    background-color: white;
+    position: fixed;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.head{
+    font-family: "Bebas Neue", sans-serif;
+    background-color: grey;
+    color: white;
+}
+.head h2{
+    letter-spacing: 1px;
+    padding: 10px;
+    font-size: 28px;
+}
+
+.body{
+    padding: 20px 10px;
+    font-family: "Roboto", sans-serif;
+}
+
+.body .buttons{
+    margin-top: 50px;
+    text-align: right;
+}
+
+.buttons a, .buttons input{
+    padding: 10px 20px;
+    font-size: 18px;
+    border: none;
+    cursor: pointer;
+    margin: 0 5px;
+}
+
+.buttons a{
+    background-color: lightgray;
+}
+
+.buttons input{
+    background-color: red;
+}
+
+
+/* Utili al js */
+
+.hid{
+    display: none;
+}
+
+.vis{
+    display: block;
+}
