@@ -36,7 +36,7 @@ class CompanyController extends Controller
         Company::create($attributes);
 
         // Inserisco all'utente l'input
-        DB::table('cards')
+        DB::table('users')
             ->where('id', auth()->user()->id)
             ->update(['company_id' => $request->input('id')]);
 

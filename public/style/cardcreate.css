@@ -1,0 +1,111 @@
+/*Bebas neue*/
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+/*Noto Sans Symbols*/
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Symbols:wght@100..900&display=swap');
+
+/*Roboto*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+main{
+    padding: 3% 5%;
+    height: 100vh;
+    overflow-y: scroll;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 9fr;
+    grid-template-areas:
+            "title title"
+            "left right";
+}
+
+h1{
+    font-family: "Bebas Neue", sans-serif;
+    grid-area: title;
+}
+
+form{
+    grid-area: left;
+}
+
+.result{
+    grid-area: right;
+}
+
+h2{
+    font-size: 28px;
+    font-family: "Noto Sans Symbols", sans-serif;
+}
+
+.inp label{
+    display: block;
+    margin-bottom: 5px;
+    font-family: "Roboto", sans-serif;
+    font-size: 20px;
+}
+
+.inp input{
+    border: 1px solid grey;
+    width: 300px;
+    padding: 10px;
+    outline: none;
+    font-size: 18px;
+    background-color: white;
+}
+
+
+
+.inp{
+    margin: 30px 0;
+}
+
+input[type=submit]{
+    background-color: dodgerblue;
+    color: white;
+    padding: 10px 20px;
+    width: 300px;
+    display: block;
+    border: 1px solid dodgerblue;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.card{
+    padding: 5px 20px;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    background-color: black;
+    color: white;
+    width: 400px;
+    height: 230px;
+    border-radius: 10px;
+    margin: 30px 0;
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+    transition: 0.6s;
+    transition-timing-function: linear;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+
+.card h4{
+    font-family: "Bebas Neue", sans-serif;
+    letter-spacing: 1px;
+    font-size: 25px;
+}
+
+.card:hover{
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+    transform: translateY(-10px) translateX(-5px);
+    cursor: pointer;
+}

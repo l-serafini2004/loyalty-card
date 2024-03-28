@@ -17,6 +17,7 @@ return new class extends Migration
             $table->id();
             $table->string('cardName');
             $table->string('color');
+            $table->string('bgColor');
             $table->foreignId('company_id');
             $table->timestamps();
         });

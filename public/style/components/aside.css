@@ -18,7 +18,7 @@ body{
 }
 
 .main{
-    max-height: 100vh;
+    height: 100vh;
 }
 
 aside{
@@ -149,6 +149,11 @@ i{
     padding: 10px 20px;
 }
 
+.signout p a{
+    color: white;
+    text-decoration: none;
+}
+
 .signout input{
     background-color: transparent;
     border: none;
@@ -183,4 +188,11 @@ i{
     top: 0;
     position: absolute;
     display: none;
+}
+
+.error{
+    color: red;
+    font-size: 15px;
+    font-family: "Inter", sans-serif;
+    margin-top: 5px;
 }
