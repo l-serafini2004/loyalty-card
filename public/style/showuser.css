@@ -33,6 +33,11 @@ main{
     grid-template-columns: repeat(7, 1fr);
 }
 
+.row div{
+    border-bottom: 1px solid grey;
+    border-right: 1px solid grey;
+}
+
 .row p{
     padding: 10px;
     text-align: center;

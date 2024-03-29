@@ -2,7 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Association;
 use App\Models\Card;
+use App\Models\Company;
+use App\Models\Customer;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Validation\ValidationException;
@@ -10,7 +13,23 @@ use App\Models\User;
 class CardController extends Controller
 {
     public function show(){
-        return view('cards.show');
+
+        // Tutte le carte che una società possiede
+        $cards = Card::query()
+                    ->where('company_id', auth()->user()->company_id);
+
+        // Voglio tutti gli utenti e le carte che possiedono
+        $associations = Association::query()
+            ->select('associations.point', 'cards.cardName', 'associations.card_number', 'customers.name', 'customers.surname', 'customers.email', 'customers.customer_number')
+            ->join('customers', 'associations.customer_id', '=', 'customers.id')
+            ->join('cards', 'cards.id', '=', 'associations.card_id')
+            ->where('cards.company_id', '=', auth()->user()->company_id);
+
+
+        return view('cards.show', [
+            'cards' => $cards->get(),
+            'associations' => $associations->get(),
+        ]);
     }
 
     public function create(){

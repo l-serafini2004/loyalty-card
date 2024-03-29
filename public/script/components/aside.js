@@ -48,6 +48,22 @@ open2.addEventListener("click", () =>{
     }
 })
 
+const open3 = document.getElementById('open3');
+const opt3 = document.getElementById('opt3');
+
+open3.addEventListener("click", () =>{
+    if(!open3.classList.contains('rotated')) {
+        open3.classList.add('rotated');
+        opt3.classList.add('open');
+        opt3.classList.remove('und');
+    }
+    else {
+        open3.classList.remove('rotated');
+        opt3.classList.remove('open');
+        opt3.classList.add('und');
+    }
+})
+
 
 // Sezione user-option
 const userOption = document.getElementById('user-option');

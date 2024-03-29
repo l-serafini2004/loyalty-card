@@ -8,6 +8,13 @@
     <x-layout>
         <main>
             <h1 class="upd-tit">Update card</h1>
+            @if(!isset($cards[0]))
+                <p class="nocard">
+                    There aren't card to modify
+                </p>
+            @endif
+
+
             <section class="carte">
                 @foreach($cards as $card)
                     <article class="carta">

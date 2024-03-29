@@ -7,6 +7,7 @@ use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\SessionController;
 use App\Http\Controllers\CompanyController;
 use App\Http\Controllers\CardController;
+use App\Http\Controllers\CustomerController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -50,3 +51,7 @@ Route::post('/cards/create', [CardController::class, 'store'])->middleware('conn
 Route::get('/cards/update', [CardController::class, 'modify'])->middleware('connected');
 Route::post('/cards/delete', [CardController::class, 'delete'])->middleware('connected');
 
+
+// Create customer
+Route::get('/users/create', [CustomerController::class, 'create'])->middleware('connected');
+Route::post('/users/create', [CustomerController::class, 'store'])->middleware('connected');

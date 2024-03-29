@@ -33,7 +33,9 @@
                     <span>Card</span>
                     <select>
                         <option value="none">--SELECT--</option>
-                        <option value="ciao">CAScas</option>
+                        @foreach($cards as $card)
+                            <option value="{{$card->id}}">{{$card->cardName}}</option>
+                        @endforeach
                     </select>
                 </div>
             </div>
@@ -45,16 +47,42 @@
         <div class="database">
             <div class="row top">
                 <div>
-                    <p>Card ID</p>
+                    <p>Card Number</p>
                 </div>
                 <div>
                     <p>Name</p>
                 </div>
-                <div><p>Surname</p></div>
-                <div><p>Email</p></div>
-                <div><p>Phone number</p></div>
-                <div><p>Type of card</p></div>
-                <div><p>Points</p></div>
+                <div>
+                    <p>Surname</p>
+                </div>
+                <div>
+                    <p>Email</p>
+                </div>
+                <div>
+                    <p>Phone number</p>
+                </div>
+                <div>
+                    <p>Type</p>
+                </div>
+                <div>
+                    <p>Points</p>
+                </div>
+            </div>
+            <div class="row">
+                @foreach($associations as $association)
+                    <div>
+                        <p>{{$association->card_number}}</p>
+                    </div>
+                    <div>
+                        <p>{{ $association->name  }}</p>
+                    </div>
+                    <div><p>{{$association->surname}}</p></div>
+                    <div><p>{{$association->email}}</p></div>
+                    <div><p>{{$association->customer_number}}</p></div>
+                    <div><p>{{$association->cardName}}</p></div>
+                    <div><p>{{$association->point}}</p></div>
+                @endforeach
+
             </div>
         </div>
     </main>

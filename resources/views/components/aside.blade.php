@@ -23,6 +23,13 @@
                 <li>Resources usage</li>
             </ul>
         </div>
+        <div class="sect">
+            <h3><i id="open3" class="fa-solid fa-chevron-right"></i>Customers</h3>
+            <ul class="und" id="opt3">
+                <li><a href="/users/create">Add Customers</a></li>
+                <li>Associate card</li>
+            </ul>
+        </div>
         <div class="signout" id="user-option">
             <form method="post" action="/logout"> @csrf <input type="submit" value="Sign out"></form>
             <p><a href="/">Back home</a></p>
