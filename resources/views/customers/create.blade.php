@@ -6,8 +6,8 @@
     <link rel="stylesheet" href="../style/sign.css">
 </head>
 <body>
+<x-layout>
 <main>
-    <p class="name">LoyaltyCard</p>
     <form action="/users/create" method="post">
         @csrf
         <h1>Create a user</h1>
@@ -47,6 +47,7 @@
         <input type="submit" value="Create">
     </form>
 </main>
+</x-layout>
 </body>
 </html>
 

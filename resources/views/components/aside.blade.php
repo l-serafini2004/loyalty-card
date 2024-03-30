@@ -27,7 +27,7 @@
             <h3><i id="open3" class="fa-solid fa-chevron-right"></i>Customers</h3>
             <ul class="und" id="opt3">
                 <li><a href="/users/create">Add Customers</a></li>
-                <li>Associate card</li>
+                <li><a href="/users/update">Associate card</a></li>
             </ul>
         </div>
         <div class="signout" id="user-option">
