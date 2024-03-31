@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Users</title>
-    <link rel="stylesheet" href="style/showuser.css">
+    <link rel="stylesheet" href="{{url('/style/showuser.css')}}">
 </head>
 <body>
 <x-layout>
@@ -71,7 +71,7 @@
             <div class="row">
                 @foreach($associations as $association)
                     <div>
-                        <p>{{$association->card_number}}</p>
+                        <p><a class="ident" href="/associations/index/{{ $association->card_number }}">{{$association->card_number}}</a></p>
                     </div>
                     <div>
                         <p>{{ $association->name  }}</p>
@@ -87,9 +87,10 @@
         </div>
     </main>
 </x-layout>
+<x-flash></x-flash>
 </body>
 </html>
 
 
 <!-- Script -->
-<script src="script/showuser.js"></script>
+<script src="../script/showuser.js"></script>

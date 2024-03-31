@@ -1,0 +1,91 @@
+/*Bebas neue*/
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+/*Roboto*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+main{
+    height: 100vh;
+    overflow-y: auto;
+}
+
+h1{
+    margin-top: 20px;
+    font-family: "Bebas Neue", sans-serif;
+    text-align: center;
+    font-size: 50px;
+    letter-spacing: 1px;
+}
+
+.dati{
+    position: relative;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    display: block;
+    width: 800px;
+    margin: 5% auto;
+}
+
+.dati .datahead{
+    text-align: center;
+    font-family: "Bebas Neue", sans-serif;
+    padding: 10px;
+    background-color: dodgerblue;
+    color: white;
+    letter-spacing: 1px;
+    font-size: 26px;
+}
+
+.dati .mod{
+    padding: 20px;
+    font-size: 20px;
+    font-family: "Roboto", sans-serif;
+}
+
+.mod p, .mod form{
+    margin: 10px 0;
+}
+
+.mod form input[type=number]{
+    outline: none;
+    padding: 5px;
+    font-size: 18px;
+}
+
+.mod input[type=submit]{
+    width: 150px;
+    cursor: pointer;
+    padding: 10px 40px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    font-family: "Roboto", sans-serif;
+    font-size: 18px;
+    border: none;
+}
+
+.del-btn{
+    background-color: red;
+    color: white;
+    margin-top: 10px;
+}
+
+.upd-btn{
+    display: block;
+    margin-top: 5%;
+    background-color: coral;
+    color: white;
+}
+
+.comeback{
+    position: absolute;
+    top: -30px;
+    font-size: 20px;
+    text-decoration: none;
+    color: dodgerblue;
+    font-family: "Roboto", sans-serif;
+}

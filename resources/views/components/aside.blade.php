@@ -1,10 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Dashboard</title>
-    <link rel="stylesheet" href="../style/components/aside.css">
-</head>
+
 <body>
     <aside id="aclose">
         <h2 id="close">LoyaltyCard</h2>
@@ -13,7 +7,7 @@
             <ul id="opt1" class="und">
                 <li><a href="/cards/create">Create</a></li>
                 <li><a href="/cards/update">Modify</a></li>
-                <li><a href="/cards">Users</a></li>
+                <li><a href="/associations/index">Users</a></li>
             </ul>
         </div>
         <div class="sect">
@@ -51,4 +45,4 @@
 <!-- Font Awesome -->
 <script src="https://kit.fontawesome.com/d30b4a9354.js" crossorigin="anonymous"></script>
 
-<script src="../script/components/aside.js"></script>
+<script src="../../script/components/aside.js"></script>

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Admin</title>
-    <link rel="stylesheet" href="../style/components/aside.css">
+    <link rel="stylesheet" href="{{url('/style/components/aside.css')}}">
 </head>
 <body>
     <div class="aside" id="aside">

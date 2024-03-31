@@ -1,9 +1,9 @@
 // Close button
-const close = document.getElementById("close");
+const closeBtn = document.getElementById("closeBtn");
 
 // Popup da chiudere
 const closePop = document.getElementById("pop");
 
-close.addEventListener("click", () =>{
+closeBtn.addEventListener("click", () =>{
     closePop.style.display = 'none';
 } )

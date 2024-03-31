@@ -61,7 +61,7 @@ class CustomerController extends Controller
             ->where('customers.email', '=', request()->input('email'))
             ->get();
 
-        if(empty($existCard[0])){
+        if(!empty($existCard[0])){
             throw ValidationException::withMessages([
                 'email' => 'The email is already used'
             ]);
@@ -87,7 +87,7 @@ class CustomerController extends Controller
 
         Association::create($attributes);
 
-        return redirect('/admin')->with('success', 'User correctly created');
+        return redirect('/associations/index')->with('success', 'Card correctly associated');
 
     }
 

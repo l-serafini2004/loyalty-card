@@ -8,6 +8,7 @@ use App\Http\Controllers\SessionController;
 use App\Http\Controllers\CompanyController;
 use App\Http\Controllers\CardController;
 use App\Http\Controllers\CustomerController;
+use App\Http\Controllers\AssociationController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -44,7 +45,7 @@ Route::post('/join', [CompanyController::class, 'join'])->middleware('notconnect
 
 // Section to connected to app
 Route::get('/admin', [CompanyController::class, 'admin'])->middleware('connected');
-Route::get('/cards', [CardController::class, 'show'])->middleware('connected');
+Route::get('/associations/index', [AssociationController::class, 'index'])->middleware('connected');
 
 Route::get('/cards/create', [CardController::class, 'create'])->middleware('connected');
 Route::post('/cards/create', [CardController::class, 'store'])->middleware('connected');
@@ -59,3 +60,8 @@ Route::post('/users/create', [CustomerController::class, 'store'])->middleware('
 // Add user --> card
 Route::get('/users/update', [CustomerController::class, 'modify'])->middleware('connected');
 Route::post('/users/update', [CustomerController::class, 'update'])->middleware('connected');
+
+// Modify user card
+Route::get('/associations/index/{association:card_number}', [AssociationController::class, 'show'])->middleware('connected');
+Route::post('/associations/update', [AssociationController::class, 'update'])->middleware('connected');
+Route::post('/associations/delete', [AssociationController::class, 'destroy'])->middleware('connected');
