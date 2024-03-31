@@ -17,7 +17,7 @@ class NotConnect
      */
     public function handle(Request $request, Closure $next)
     {
-        if((auth()->check() && auth()->user() === NULL) || !auth()->check()){
+        if((auth()->check() && auth()->user()->company_id !== NULL) || !auth()->check()){
             abort(ResponseAlias::HTTP_FORBIDDEN);
         }
         return $next($request);
