@@ -19,11 +19,12 @@ class AssociationController extends Controller
             ->select('associations.point', 'cards.cardName', 'associations.card_number', 'customers.name', 'customers.surname', 'customers.email', 'customers.customer_number')
             ->join('customers', 'associations.customer_id', '=', 'customers.id')
             ->join('cards', 'cards.id', '=', 'associations.card_id')
-            ->where('cards.company_id', '=', auth()->user()->company_id);
-
+            ->where('cards.company_id', '=', auth()->user()->company_id)
+            ->filter(request(['name', 'surname', 'email', 'point', 'card']));
 
         return view('cards.index', [
             'cards' => $cards->get(),
+            'currentCard' => request()->input('card'),
             'associations' => $associations->get(),
         ]);
     }

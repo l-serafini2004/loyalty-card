@@ -14,6 +14,31 @@ class Association extends Model
 
     protected $guarded = [];
 
+    public function scopeFilter($query, array $filters){
+
+        $query->when($filters['name'] ?? false, fn($query, $search) =>
+            $query->where('customers.name', 'like', '%' . $search . '%'),
+        );
+
+        $query->when($filters['surname'] ?? false, fn($query, $search) =>
+            $query->where('customers.surname', 'like', '%' . $search . '%'),
+        );
+
+        $query->when($filters['email'] ?? false, fn($query, $search) =>
+            $query->where('customers.email', 'like', '%' . $search . '%'),
+        );
+
+        $query->when($filters['point'] ?? false, fn($query, $search) =>
+            $query->where('associations.point', '=' , $search),
+        );
+
+        $query->when($filters['card'] ?? false, fn($query, $search) =>
+            $query->where('cards.id', '=' , $search),
+        );
+
+
+    }
+
     public function cards(){
         return $this->hasMany(Card::class);
     }

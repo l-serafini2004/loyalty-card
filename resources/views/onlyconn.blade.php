@@ -1,1 +1,7 @@
-<x-aside></x-aside>
+
+    <x-layout>
+
+    </x-layout>
+
+
+

@@ -135,3 +135,10 @@ form{
 .ident{
     text-decoration: none;
 }
+
+.results{
+    text-align: center;
+    font-family: "Roboto", sans-serif;
+    font-size: 20px;
+    color: grey;
+}
