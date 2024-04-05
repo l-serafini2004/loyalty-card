@@ -9,6 +9,8 @@ use App\Http\Controllers\CompanyController;
 use App\Http\Controllers\CardController;
 use App\Http\Controllers\CustomerController;
 use App\Http\Controllers\AssociationController;
+use App\Http\Controllers\DocumentationController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -65,3 +67,6 @@ Route::post('/users/update', [CustomerController::class, 'update'])->middleware(
 Route::get('/associations/index/{association:card_number}', [AssociationController::class, 'show'])->middleware('connected');
 Route::post('/associations/update', [AssociationController::class, 'update'])->middleware('connected');
 Route::post('/associations/delete', [AssociationController::class, 'destroy'])->middleware('connected');
+
+// Documentation sections
+Route::get('/documentation/api', [DocumentationController::class, 'api'])->middleware('connected');

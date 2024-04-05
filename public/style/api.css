@@ -1,0 +1,56 @@
+/* Bebas neue */
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+/* Be Vietnam Pro */
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/*Roboto*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+main{
+    height: 100vh;
+    overflow-y: scroll;
+    padding: 2% 3%;
+}
+
+h1{
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 50px;
+    letter-spacing: 1px;
+}
+
+.your-data h2{
+    margin: 20px 0 10px;
+    font-size: 28px;
+    color: red;
+    font-family: "Be Vietnam Pro", sans-serif;
+}
+
+.paragraph{
+    margin: 30px 0;
+}
+
+.your-data p{
+    font-family: "Roboto", sans-serif;
+    font-size: 18px;
+}
+
+.pass{
+    font-family: "Roboto", sans-serif;
+    font-size: 18px;
+    margin: 10px 0;
+
+}
+
+.pass input{
+    outline: none;
+    padding: 5px;
+    width: 300px;
+}
+

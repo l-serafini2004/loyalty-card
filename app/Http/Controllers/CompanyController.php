@@ -7,6 +7,7 @@ use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Validation\ValidationException;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Str;
 
 class CompanyController extends Controller
 {
@@ -25,20 +26,27 @@ class CompanyController extends Controller
             'rootPassword' => 'required|min:8',
             'plan' => 'required',
         ]);
+
         if($request->input('repeat') !== $request->input("rootPassword")){
             throw ValidationException::withMessages([
                 'repeat' => 'The password are different',
             ]);
         }
 
-
         // Creo la company
         Company::create($attributes);
+
+        // Genero un token casuale di 30 caratteri
+        $token = Str::random(30);
+
 
         // Inserisco all'utente l'input
         DB::table('users')
             ->where('id', auth()->user()->id)
-            ->update(['company_id' => $request->input('id')]);
+            ->update([
+                'company_id' => $request->input('id'),
+                'api_token' => $token,
+            ]);
 
         return redirect('/')->with('success', 'Company account created');
     }

@@ -13,7 +13,7 @@
         <div class="sect">
             <h3><i id="open2" class="fa-solid fa-chevron-right"></i>Personal</h3>
             <ul class="und" id="opt2">
-                <li>APIs token</li>
+                <li><a href="/documentation/api">APIs token</a></li>
                 <li>Resources usage</li>
             </ul>
         </div>
