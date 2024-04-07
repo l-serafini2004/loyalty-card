@@ -27,7 +27,7 @@
             <label >
                 Color of the card
             </label>
-            <input name="color" type="color" id="color" class="inpt">
+            <input name="color" type="color" id="color" class="inpt" value="#ffffff">
             @error('color')
             <p class="error">{{$message}}</p>
             @enderror

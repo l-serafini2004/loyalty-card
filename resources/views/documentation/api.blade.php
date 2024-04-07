@@ -62,7 +62,7 @@
                                     "name": "{{ $user["name"]  }}",
                                     "surname": "{{ $user["surname"]  }}",
                                     "email": "{{ $user["email"]  }}",
-                                    "phone_number": {{ $user["phone_number"]  }},
+                                    "phone_number": "{{ $user["phone_number"] }}",
                                     "api_token": "{{ $user["api_token"] }}",
                                     "company_id": "{{$user["company_id"]}}",
                                     "created_at": "{{ $user["created_at"] }}",

@@ -24,6 +24,10 @@ use App\Http\Controllers\DocumentationController;
 
 Route::get('/', [SessionController::class, 'index']);
 
+// Api guide
+Route::get('/documentation', [DocumentationController::class, 'index']);
+
+
 // Register section
 Route::get('/register', [RegisterController::class, 'create'])->middleware('guest');
 Route::post('/register', [RegisterController::class, 'store'])->middleware('guest');
@@ -42,7 +46,7 @@ Route::post('/create-company', [CompanyController::class, 'store'])->middleware(
 
 
 // Connect your company
-Route::get('/join', [CompanyController::class, 'sign'])->middleware('notconnect');
+Route::get('/join', [CompanyController::class, 'sign'])->middleware('notconnect')->name('join');
 Route::post('/join', [CompanyController::class, 'join'])->middleware('notconnect');
 
 // Section to connected to app

@@ -11,4 +11,10 @@ class DocumentationController extends Controller
             'user' => auth()->user(),
         ]);
     }
+
+    public function index(){
+        return view('documentation.index', [
+            'base_add' => 'http://127.0.0.1:8000/',
+        ]);
+    }
 }

@@ -14,10 +14,14 @@ class ShopConnect
      *
      * @param  \Illuminate\Http\Request  $request
      * @param  \Closure(\Illuminate\Http\Request): (\Illuminate\Http\Response|\Illuminate\Http\RedirectResponse)  $next
-     * @return \Illuminate\Http\Response|\Illuminate\Http\RedirectResponse
+     * @return string
      */
     public function handle(Request $request, Closure $next)
     {
+        if( !auth()->check() ){
+            abort(ResponseAlias::HTTP_FORBIDDEN);
+        }
+
         if(auth()->user()->company_id === NULL){
             abort(ResponseAlias::HTTP_FORBIDDEN);
         }
