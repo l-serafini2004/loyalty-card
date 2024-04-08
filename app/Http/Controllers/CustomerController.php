@@ -20,6 +20,7 @@ class CustomerController extends Controller
         $attributes = request()->validate([
             'name' => 'required',
             'surname' => 'required',
+            'customer_number' => 'required',
             'email' => 'required|unique:customers',
         ]);
 

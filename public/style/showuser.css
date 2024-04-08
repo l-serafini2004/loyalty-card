@@ -20,9 +20,11 @@ main{
 
 .database{
     overflow: auto;
-    width: 80%;
+    width: 90%;
     height: 600px;
-    display: block;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
     margin: 0 auto 3%;
     border: 1px solid black;
 }
@@ -31,13 +33,17 @@ main{
     text-align: center;
     display: grid;
     grid-template-columns: repeat(7, 1fr);
+    width: 100%;
 }
 
 .row div{
-    border-bottom: 1px solid grey;
+    width: 100%;
     border-right: 1px solid grey;
 }
 
+.not-top div{
+    border-bottom: 1px solid grey;
+}
 .row p{
     padding: 10px;
     text-align: center;

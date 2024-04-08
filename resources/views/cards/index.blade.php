@@ -71,7 +71,7 @@
                         <p>Points</p>
                     </div>
                 </div>
-                <div class="row">
+                <div class="row not-top">
                     @foreach($associations as $association)
                         <div>
                             <p><a class="ident" href="/associations/index/{{ $association->card_number }}">{{$association->card_number}}</a></p>

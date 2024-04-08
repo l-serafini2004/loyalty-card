@@ -7,7 +7,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CompanyControllerAPI;
 use App\Http\Controllers\SessionControllerAPI;
 use App\Http\Controllers\CardControllerAPI;
-
+use App\Http\Controllers\AssociationControllerAPI;
 
 /*
 |--------------------------------------------------------------------------
@@ -39,7 +39,12 @@ Route::group(['middleware' => ['auth:sanctum']], function (){
     // Get the cards with a specific name
     Route::get('/card/show', [CardControllerAPI::class, 'show']);
 
-    //
+    // Get all the info about user and card
+    Route::get('/association/all', [AssociationControllerAPI::class, 'all']);
+
+    // Change the value of point of the association
+    Route::post('/association/update', [AssociationControllerAPI::class, 'update']);
+
 
 });
 
