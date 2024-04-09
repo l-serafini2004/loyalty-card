@@ -4,6 +4,9 @@ namespace App\Http\Controllers;
 
 use App\Http\Resources\AssociationResource;
 use App\Models\Association;
+use App\Models\Card;
+use App\Models\Customer;
+use App\Models\User;
 use App\Traits\HttpResponses;
 use Illuminate\Http\Request;
 use function PHPUnit\Framework\isEmpty;
@@ -55,6 +58,61 @@ class AssociationControllerAPI extends Controller
 
         return $this->success([
             'message' => 'Association correctly updated',
+        ]);
+
+    }
+
+    public function store(){
+
+        // Controlliamo se esiste l'utente
+        $customer = Customer::query()
+            ->where('email', '=', request('email'))
+            ->first();
+
+        if(!isset($customer['id'])) return $this->error('', 'The user does not exists', 404);
+
+        // Controlliamo se esiste la carta
+        $card = Card::query()
+            ->where('id', '=', request('card_id'))
+            ->where('company_id', '=', auth()->user()->company_id)
+            ->first();
+
+        if(!isset($card['id'])) return $this->error('', 'The card does not exists', 404);
+
+
+        $existCard = Association::query()
+            ->join('customers', 'customers.id', '=', 'associations.customer_id')
+            ->join('cards', 'cards.id', '=', 'associations.card_id')
+            ->where('cards.company_id', '=', auth()->user()->company_id)
+            ->where('customers.email', '=', request('email'))
+            ->first();
+
+        if(!empty($existCard['id'])){
+            return $this->error('', 'This user already has a card in this company', 404);
+        }
+
+        // Generiamo un numero da 12 --> univoco
+        do{
+
+            $cardNumber = mt_rand(100000000000, 999999999999);
+            $existNumber = Association::query()
+                ->where('card_number', '=', $cardNumber)
+                ->get();
+
+        }while(!empty($existNumber[0]));
+
+        // Creiamo l'associazione
+        $attributes = [
+            'point' => 0,
+            'card_number' => $cardNumber,
+            'customer_id' => $customer['id'],
+            'card_id' => $card['id'],
+        ];
+
+        $assoc = Association::create($attributes);
+
+        return response()->json([
+            $assoc
         ]);
 
     }

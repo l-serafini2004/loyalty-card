@@ -50,7 +50,7 @@ class CustomerController extends Controller
 
         if(empty($existUser[0])){
             throw ValidationException::withMessages([
-                'email' => 'The user did not exists'
+                'email' => 'The user does not exists'
             ]);
         }
 

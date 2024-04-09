@@ -8,7 +8,7 @@ use App\Http\Controllers\CompanyControllerAPI;
 use App\Http\Controllers\SessionControllerAPI;
 use App\Http\Controllers\CardControllerAPI;
 use App\Http\Controllers\AssociationControllerAPI;
-
+use App\Http\Controllers\CustomerControllerAPI;
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -45,6 +45,11 @@ Route::group(['middleware' => ['auth:sanctum']], function (){
     // Change the value of point of the association
     Route::post('/association/update', [AssociationControllerAPI::class, 'update']);
 
+    // Add a user in the customer db
+    Route::post('/customer/store', [CustomerControllerAPI::class, 'store']);
+
+    // Set the user to a card
+    Route::post('/association/store', [AssociationControllerAPI::class, 'store']);
 
 });
 
