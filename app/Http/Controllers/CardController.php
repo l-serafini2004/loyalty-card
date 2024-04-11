@@ -90,4 +90,31 @@ class CardController extends Controller
 
     }
 
+
+    public function showUpdate(Card $card){
+        return view('cards.upd', [
+            'card' => Card::findOrFail($card['id'])
+        ]);
+    }
+
+    public function update(){
+
+        $attributes = request()->validate([
+            'cardName' => 'required|min:1',
+            'color' => 'required',
+            'bgColor' => 'required',
+        ]);
+
+        $card = Card::findOrFail(request()->input('id'));
+
+        $card->cardName = $attributes['cardName'];
+        $card->color = $attributes['color'];
+        $card->bgColor = $attributes['bgColor'];
+
+        $card->save();
+
+        return redirect('/')->with('success', 'Card correctly updated');
+
+    }
+
 }

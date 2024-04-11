@@ -39,6 +39,9 @@ Route::group(['middleware' => ['auth:sanctum']], function (){
     // Get the cards with a specific name
     Route::get('/card/show', [CardControllerAPI::class, 'show']);
 
+    // Delete a card
+    Route::post('/card/delete', [CardControllerAPI::class, 'destroy']);
+
     // Get all the info about user and card
     Route::get('/association/all', [AssociationControllerAPI::class, 'all']);
 
@@ -50,6 +53,9 @@ Route::group(['middleware' => ['auth:sanctum']], function (){
 
     // Set the user to a card
     Route::post('/association/store', [AssociationControllerAPI::class, 'store']);
+
+    // Get info about customer
+    Route::get('/customer/show', [CustomerControllerAPI::class, 'show']);
 
 });
 

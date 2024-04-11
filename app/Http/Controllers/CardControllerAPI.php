@@ -28,5 +28,13 @@ class CardControllerAPI extends Controller
 
     }
 
+    public function destroy(){
+        $id = request('id');
+
+        if(Card::findOrFail( $id )->delete()) return response()->json('Card delete correctly');
+        else return response()->json('A problem has occurred');
+
+    }
+
 
 }

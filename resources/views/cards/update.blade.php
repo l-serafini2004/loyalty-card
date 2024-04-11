@@ -21,7 +21,7 @@
                         <x-card :card=" $card " />
                         <div class="info-card">
                             <p><b>{{ $card->cardName }}</b></p>
-                            <p><a href="#">Modify</a></p>
+                            <p><a href="/card/update/{{$card->id}}">Modify</a></p>
                             <p><a class="delete" id="{{ $card->id }}">Delete</a></p>
                         </div>
                     </article>

@@ -57,7 +57,8 @@ Route::get('/cards/create', [CardController::class, 'create'])->middleware('conn
 Route::post('/cards/create', [CardController::class, 'store'])->middleware('connected');
 Route::get('/cards/update', [CardController::class, 'modify'])->middleware('connected');
 Route::post('/cards/delete', [CardController::class, 'delete'])->middleware('connected');
-
+Route::get('/card/update/{card:id}', [CardController::class, 'showUpdate'])->middleware('connected');
+Route::post('/card/update', [CardController::class, 'update'])->middleware('connected');
 
 // Create customer
 Route::get('/users/create', [CustomerController::class, 'create'])->middleware('connected');
