@@ -44,6 +44,9 @@ Route::post('/logout', [SessionController::class, 'destroy'])->middleware('auth'
 Route::get('/create-company', [CompanyController::class, 'create'])->middleware('notconnect');
 Route::post('/create-company', [CompanyController::class, 'store'])->middleware('notconnect');
 
+// Left a company
+Route::get('/company/left', [CompanyController::class, 'left'])->middleware('connected');
+Route::post('/company/left', [CompanyController::class, 'destroy'])->middleware('connected');
 
 // Connect your company
 Route::get('/join', [CompanyController::class, 'sign'])->middleware('notconnect')->name('join');

@@ -114,4 +114,37 @@ class CompanyController extends Controller
 
     }
 
+    public function left(){
+        $numberOfUser = User::query()
+                        ->where('company_id', '=', auth()->user()->company_id)
+                        ->count();
+
+
+        return view('companies.left', [
+            'n' => (int)$numberOfUser,
+        ]);
+
+    }
+
+    public function destroy(){
+
+        // Check di sicurezza
+        $numberOfUser = User::query()
+            ->where('company_id', '=', auth()->user()->company_id)
+            ->count();
+        if($numberOfUser === 1) return redirect('/company/left');
+
+        $user = User::findOrFail(auth()->user()->id);
+
+        $user->update([
+            'api_token' => null,
+            'company_id' => null
+        ]);
+
+        $user->save();
+
+        return redirect('/')->with('success', 'Correctly log out from company');
+
+    }
+
 }

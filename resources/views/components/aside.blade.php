@@ -14,7 +14,7 @@
             <h3><i id="open2" class="fa-solid fa-chevron-right"></i>Personal</h3>
             <ul class="und" id="opt2">
                 <li><a href="/documentation/api">APIs token</a></li>
-                <li>Resources usage</li>
+                <li><a href="/company/left">Leave company</a></li>
             </ul>
         </div>
         <div class="sect">

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Card create</title>
-    <link rel="stylesheet" href="../style/cardcreate.css">
+    <link rel="stylesheet" href="{{url('style/cardcreate.css')}}">
 </head>
 <x-layout>
 
@@ -60,4 +60,4 @@
 </x-layout>
 </html>
 
-<script src="../script/cardcreate.js"></script>
+<script src="{{url('/script/cardcreate.js')}}"></script>
