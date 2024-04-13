@@ -78,3 +78,6 @@ Route::post('/associations/delete', [AssociationController::class, 'destroy'])->
 
 // Documentation sections
 Route::get('/documentation/api', [DocumentationController::class, 'api'])->middleware('connected');
+
+// ONLY CUSTOMERS PART
+Route::get('/mycards', [CustomerController::class, 'index']);

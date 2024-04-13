@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>SingIn</title>
-    <link rel="stylesheet" href="style/sign.css">
+    <link rel="stylesheet" href="{{url('style/sign.css')}}">
 </head>
 <body>
 

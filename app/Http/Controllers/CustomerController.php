@@ -11,6 +11,28 @@ use Illuminate\Http\Request;
 use Illuminate\Validation\ValidationException;
 class CustomerController extends Controller
 {
+
+    public function index(){
+
+        // Controlla se ci sono degli input
+        if(empty(request()->input('email'))) return view('customers.show');
+        else{
+            $cards = Customer::query()
+                ->select('associations.*', 'cards.*', 'customers.*')
+                ->join('associations', 'associations.customer_id', '=', 'customers.id')
+                ->join('cards', 'cards.id', '=', 'associations.card_id')
+                ->where('customers.email', '=', request()->input('email'))
+                ->get();
+
+            return view('customers.show', [
+                'cards' => $cards,
+            ]);
+        }
+
+
+
+    }
+
     public function create(){
         return view('customers.create');
     }

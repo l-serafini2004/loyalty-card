@@ -1,0 +1,60 @@
+/*Bebas neue*/
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+/*Roboto*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+main{
+    margin: 0 3%;
+}
+
+h1{
+    letter-spacing: 1px;
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 40px;
+}
+
+form{
+    margin: 20px 0;
+}
+form p{
+    font-size: 18px;
+    font-family: "Roboto", sans-serif;
+}
+
+form input{
+    width: 300px;
+    display: block;
+    margin: 5px 0;
+    padding: 10px;
+    outline: none;
+    font-size: 16px;
+}
+
+form input[type=submit]{
+    cursor: pointer;
+}
+
+.cards{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.carta .punti{
+    margin: 10px 10px;
+    font-family: "Roboto", sans-serif;
+    font-size: 18px;
+}
+
+.sub{
+    font-family: "Bebas Neue", sans-serif;
+    letter-spacing: 1px;
+    font-size: 30px;
+}

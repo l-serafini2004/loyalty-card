@@ -58,6 +58,7 @@
     </article>
 </main>
 </x-layout>
+<x-flash></x-flash>
 </html>
 
 <script src="{{url('/script/cardcreate.js')}}"></script>

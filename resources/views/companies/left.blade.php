@@ -2,13 +2,13 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Card create</title>
+    <title>Leave company</title>
     <link rel="stylesheet" href="{{url('style/leftcomp.css')}}">
 </head>
 <x-layout>
     <main>
         <div class="leftcmp">
-            <h1>Left company</h1>
+            <h1>Leave company</h1>
             <p>
                 If you want to leave your company, you only have to click the button below,
                 but remember that you can't do if only one user is associated with your company.

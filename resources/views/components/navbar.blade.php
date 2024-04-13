@@ -6,6 +6,6 @@
     <ul>
         <li><a href="/">Home</a></li>
         <li><a href="/documentation">Documentation</a></li>
-        <li><a href="#">Dashboard</a></li>
+        <li><a href="/mycards">MyCard</a></li>
     </ul>
 </nav>

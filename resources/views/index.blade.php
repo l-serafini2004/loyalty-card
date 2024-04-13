@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Welcome On LoyaltyCard</title>
-    <link rel="stylesheet" href="style/index.css">
+    <link rel="stylesheet" href="{{url('style/index.css')}}">
 </head>
 <body>
 

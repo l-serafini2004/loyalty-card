@@ -63,7 +63,7 @@ class CardController extends Controller
 
         Card::create($attributes);
 
-        return redirect('/')->with('success', 'Card created with success');
+        return redirect('/cards/create')->with('success', 'Card created with success');
 
     }
 
@@ -75,9 +75,17 @@ class CardController extends Controller
         $cards = Card::query()
             ->where('company_id', auth()->user()->company_id);
 
+        $casual_name = [
+            'name' => 'John',
+            'surname' => 'Doe',
+            'customer_number' => '12345678936',
+            'email' => 'j.doe@email.com',
+            'card_number' => '637840293726'
+        ];
 
         return view('cards.update', [
-            'cards' => $cards->get()
+            'cards' => $cards->get(),
+            'casual_name' => $casual_name,
         ]);
     }
 
