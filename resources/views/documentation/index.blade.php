@@ -21,6 +21,12 @@
             <ul class="subcat">
                 <li><a href="#card-get-all">All</a></li>
                 <li><a href="#card-get-specific">Specific</a></li>
+                <li><a href="#card-delete">Delete</a></li>
+            </ul>
+            <li><a href="#association"><b>Association</b></a></li>
+            <ul class="subcat">
+                <li><a href="#association-all">All</a></li>
+                <li><a href="#association-update">Update points</a></li>
             </ul>
         </ul>
     </section>
@@ -73,7 +79,7 @@
             </h3>
             <p>If you want to get all the cards that you've been created, you only make a get request to this address:</p>
             <x-code-section>
-                <pre>http://127.0.0.1:8000/api/card/index</pre>
+                <pre>{{ $base_add . 'api/' }}card/index</pre>
             </x-code-section>
             <p>You'll get all the card of your company account: in particular card name, color and background color</p>
 
@@ -82,7 +88,7 @@
             </h3>
             <p>If you want only some card, i.e. only the cards that name that start with "go", you can use this address  (GET REQUEST): </p>
             <x-code-section>
-                <pre>http://127.0.0.1:8000/api/card/show</pre>
+                <pre>{{ $base_add . 'api/' }}card/show</pre>
             </x-code-section>
             <p>You have to specify the card name, or part of that, though. By the way, you'll get an array that contains all the cards that match the string you passed at the request (in this way):</p>
             <x-code-section>
@@ -92,7 +98,54 @@
                 }
                 </pre>
             </x-code-section>
+            <h3 id="card-delete">
+                Delete
+            </h3>
+            <p>If you want to delete a card (ATTENTION: if you delete that you'll remove all the associations with that card in database, think straight before do it) you have to pass this address: </p>
+            <x-code-section>
+                <pre>{{ $base_add . 'api/' }}card/delete</pre>
+            </x-code-section>
+            <p>You have to specify the id of the card you want remove, like this:</p>
+            <x-code-section>
+                <pre>
+                    {
+                        "id" : 3
+                    }
+                </pre>
+            </x-code-section>
+            <h2 id="association">
+                Association
+            </h2>
+            <h3 id="association-all">
+                All
+            </h3>
+            <p>With the following link you can get all the associations in your company, with card name, card number, points, email, name and surname of the owner of the card:</p>
+            <x-code-section>
+                <pre>
+                    {{ $base_add . 'api/' }}association/all
+                </pre>
+            </x-code-section>
+            <p>You don't need to pass any parameters to get that.</p>
+            <h3 id="association-update">
+                Update points
+            </h3>
+            <p>With this link you can update the points of an association (of a card own by a customer):</p>
+            <x-code-section>
+                <pre>
+                    {{ $base_add . 'api/' }}association/update
+                </pre>
+            </x-code-section>
+            <p>You need to pass two parameters: the email of the owner and the points you want to add or subtract to his count. If you want to add points you only have to pass the number; if you put "-" before this number you'll remove that number of points. </p>
+            <x-code-section>
+                <pre>
+                    {
+                        "email":"email@email.com",
+                        "changePoint":numberOfPoints
+                    }
+                </pre>
+            </x-code-section>
         </article>
+
 
     </section>
 </main>

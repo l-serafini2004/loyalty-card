@@ -16,14 +16,18 @@
         <label>
             Email
         </label>
-        <input type="email" name="email">
+        <input type="email" name="email" value="{{old('email')}}">
+        @error('email')
+            <p class="error">{{$message}}</p>
+        @enderror
         <label>
             Password
         </label>
         <input type="password" name="password">
-        @error('email')
+        @error('password')
             <p class="error">{{$message}}</p>
         @enderror
+
 
         <input type="submit" value="Sign in">
         <span>Don't have an account? <a href="/register">Register now</a></span>

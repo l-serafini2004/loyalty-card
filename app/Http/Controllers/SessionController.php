@@ -32,11 +32,13 @@ class SessionController extends Controller
 
         if(auth()->attempt($attributes)){
             return redirect('/')->with('success', 'Welcome back, ' . auth()->user()->name . ' ' . auth()->user()->surname);
+        }else{
+            throw ValidationException::withMessages([
+                'email' => 'Your provided credentials could not be verified',
+            ]);
         }
 
-        throw ValidationException::withMessages([
-            'email' => 'Your provided credentials could not be verified',
-        ]);
+
     }
 
 

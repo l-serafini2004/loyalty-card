@@ -69,7 +69,7 @@
                 <h2>Free Plan</h2>
                 <p class="descp">Perfect for your familiar run business</p>
                 <p class="price">0,00</p>
-                <a href="#">Subscribe</a>
+                <a href="/register">Subscribe</a>
             </div>
             <hr>
             <p class="srvc">Services</p>
@@ -93,7 +93,7 @@
                 <h2>Premium Plan</h2>
                 <p class="descp">Perfect for your medium activity</p>
                 <p class="price">3,99</p>
-                <a href="#">Subscribe</a>
+                <a href="/register">Subscribe</a>
             </div>
             <hr>
             <p class="srvc">Services</p>
@@ -117,7 +117,7 @@
                 <h2>Business Plan</h2>
                 <p class="descp">Perfect for your large activity</p>
                 <p class="price">8,99</p>
-                <a href="#">Subscribe</a>
+                <a href="/register">Subscribe</a>
             </div>
             <hr>
             <p class="srvc">Services</p>

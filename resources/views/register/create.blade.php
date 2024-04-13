@@ -32,7 +32,9 @@
             Phone number*
         </label>
         <input type="text" name="phone_number">
-
+        @error('phone_number')
+            <p class="error">{{$message}}</p>
+        @enderror
         <label>
             Email
         </label>

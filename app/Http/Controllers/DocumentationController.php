@@ -14,7 +14,7 @@ class DocumentationController extends Controller
 
     public function index(){
         return view('documentation.index', [
-            'base_add' => 'http://127.0.0.1:8000/',
+            'base_add' => 'https://127.0.0.1:8000/',
         ]);
     }
 }

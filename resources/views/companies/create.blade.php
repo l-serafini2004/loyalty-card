@@ -23,7 +23,7 @@
                     <label>
                         Name
                     </label>
-                    <input type="text" name="company_name" value="{{old('name')}}">
+                    <input type="text" name="company_name" value="{{old('company_name')}}">
                 </div>
                 @error('company_name')
                     <p class="error">{{$message}}</p>

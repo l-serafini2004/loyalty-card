@@ -14,7 +14,7 @@
             <p>
                 If you want to create your application or add the functionality of this service on your website you can use our api.
                 We provide you free and unlimited API for your activity: you only need to follow the steps that we give you in this guide.
-                For more information you can read the following <a href="#">API's documentation</a>
+                For more information you can read the following <a href="{{url('/documentation')}}">API's documentation</a>
             </p>
             <h2>Your data</h2>
             <p>

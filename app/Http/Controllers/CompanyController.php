@@ -19,6 +19,7 @@ class CompanyController extends Controller
         $attributes = request()->validate([
             'company_name' => 'required',
             'email' => 'required|email',
+            'company_number' => 'regex:/^[0-9]+$/',
             'state' => 'required',
             'city' => 'required',
             'address' => 'required',
@@ -97,10 +98,17 @@ class CompanyController extends Controller
             ]);
         }
 
+        // Genero un token casuale di 30 caratteri
+        $token = Str::random(30);
+
+
         // Aggiungo il codice all'utente
-        DB::table('cards')
+        DB::table('users')
             ->where('id', auth()->user()->id)
-            ->update(['company_id' => $request->input('id')]);
+            ->update([
+                'company_id' => $request->input('id'),
+                'api_token' => $token,
+            ]);
 
         return redirect('/')->with('success', 'Join correctly on a company');
 
