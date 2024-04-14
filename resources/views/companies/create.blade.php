@@ -120,22 +120,7 @@
                         <option value="business" id="2">Business</option>
                     </select>
                 </div>
-                <div class="inp">
-                    <label>Name on card</label>
-                    <input type="text" placeholder="John Doe">
-                </div>
-                <div class="inp">
-                    <label>Card number</label>
-                    <input type="text" placeholder="1234567812345678">
-                </div>
-                <div class="inp">
-                    <label>Expiration</label>
-                    <input type="text" placeholder="MM/YYYY">
-                </div>
-                <div class="inp">
-                    <label>CVV</label>
-                    <input type="text" placeholder="123">
-                </div>
+
             </div>
 
         </div>

@@ -65,6 +65,24 @@ class CustomerController extends Controller
 
     public function update(){
 
+        $map = [
+            'free' => 500,
+            'premium' => 1500,
+            'business' => 5000,
+        ];
+
+        // Controllo il numero massimo di associazioni (se raggiunto esco)
+        $nAcc = Association::query()
+                ->join('cards', 'cards.id', '=', 'associations.card_id')
+                ->where('cards.company_id', '=', auth()->user()->company_id)
+                ->count();
+
+        if($nAcc === $map[auth()->user()->company->plan]){
+            throw ValidationException::withMessages([
+                'email' => 'There are too many associations, update your plan!',
+            ]);
+        }
+
         // Controllo che l'utente esista
         $existUser = Customer::query()
             ->where('email', '=', request()->input('email'))

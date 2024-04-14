@@ -49,10 +49,7 @@
         <div class="par right">
             <h2>Why you should choose us?</h2>
             <p>
-                LoyaltyCard is a website that allows you to improve your activity with an efficient loyalty card service.
-                With the dashboard of this website you can manage all your customers and with our APIs you can add to your website
-                a page in order your client could manage their electronic LoyaltyCard.
-                You can select your favourite plan (it's depends on your need).
+                Welcome! Choosing our website means more than just managing fidelity cards; it's about nurturing customer relationships. We offer seamless integration, personalized rewards, and data-driven insights, empowering businesses to foster loyalty effortlessly. Join us in revolutionizing customer engagement!
             </p>
         </div>
     </article>
@@ -102,7 +99,7 @@
                     <b>1500</b> card for your customers
                 </li>
                 <li>
-                    2 <b>type of cards</b>
+                    3 <b>type of cards</b>
                 </li>
                 <li>
                     5 <b>accounts</b>
@@ -126,7 +123,7 @@
                     <b>5000</b> card for your customers
                 </li>
                 <li>
-                    3 <b>type of cards</b>
+                    5 <b>type of cards</b>
                 </li>
                 <li>
                     15 <b>accounts</b>

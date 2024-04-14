@@ -28,6 +28,10 @@
                 <li><a href="#association-all">All</a></li>
                 <li><a href="#association-update">Update points</a></li>
             </ul>
+            <li><a href="#customer"><b>Customer</b></a></li>
+            <ul class="subcat">
+                <li><a href="#customer-add">Add</a></li>
+            </ul>
         </ul>
     </section>
     <section class="content">
@@ -144,6 +148,28 @@
                     }
                 </pre>
             </x-code-section>
+            <h2 id="customer">Customer</h2>
+            <h3 id="customer-add">
+                Add
+            </h3>
+            <p>If you want to add a customer you have to use the following address. If the user already exists this operation will fail:</p>
+            <x-code-section>
+                <pre>
+                    {{$base_add . 'api/'}}customer/store
+                </pre>
+            </x-code-section>
+            <p>You need to pass some parameters in order this function works:</p>
+            <x-code-section>
+                <pre>
+                    {
+                        "name":"Name",
+                        "surname":"Surname",
+                        "email":"Email",
+                        "customer_number":"Number"
+                    }
+                </pre>
+            </x-code-section>
+
         </article>
 
 

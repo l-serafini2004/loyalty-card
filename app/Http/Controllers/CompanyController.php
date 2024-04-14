@@ -81,8 +81,8 @@ class CompanyController extends Controller
         // Controlla il caso in cui ci siano troppi utenti
         $map = [
             'free' => 1,
-            'premium' => 3,
-            'business' => 5,
+            'premium' => 5,
+            'business' => 15,
         ];
 
         $n = User::query()

@@ -23,7 +23,7 @@
             <ul>
                 <li><a href="/create-company">New Shop</a></li>
                 <li><a href="/join">Join a company</a></li>
-                <li><a href="#">APIs for your website</a></li>
+                <li><a href="/documentation/api">APIs for your website</a></li>
                 <li><a href="#">Get the library</a></li>
             </ul>
         </section>
@@ -31,7 +31,7 @@
             <h2>Guides</h2>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec pulvinar, elit id cursus mattis, risus ex feugiat justo, sed sollicitudin odio libero at sem. Fusce efficitur lobortis neque in bibendum. Phasellus sagittis dignissim scelerisque. </p>
             <ul>
-                <li><a href="#">Documentation</a></li>
+                <li><a href="/documentation">Documentation</a></li>
                 <li><a href="#">Info</a></li>
                 <li><a href="#">Price</a></li>
                 <li><a href="#">How can I use it</a></li>
