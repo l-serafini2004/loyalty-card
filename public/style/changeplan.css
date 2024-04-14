@@ -1,0 +1,62 @@
+
+/*Bebas neue*/
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+/*Roboto*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.changeplan{
+    padding: 2% 3%;
+}
+
+.changeplan h1{
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 42px;
+    letter-spacing: 1px;
+}
+
+.changeplan form, .curr{
+    font-family: "Roboto", sans-serif;
+    font-size: 18px;
+}
+.curr{
+    margin-top: 20px;
+}
+
+.changeplan form select, .changeplan form input{
+
+    margin-top: 10px;
+    margin-right: 10px;
+    font-size: 16px;
+    outline: none;
+}
+
+.changeplan form select{
+    padding: 10px 10px;
+}
+.changeplan form input {
+    padding: 10px 20px;
+    cursor: pointer;
+    background-color: dodgerblue;
+    color: white;
+    border: 1px solid dodgerblue;
+}
+.error{
+    margin: 5px 0;
+    color: red;
+    font-size: 15px;
+    font-family: "Inter", sans-serif;
+}
+
+.success{
+    margin: 5px 0;
+    color: green;
+    font-size: 15px;
+    font-family: "Inter", sans-serif;
+}

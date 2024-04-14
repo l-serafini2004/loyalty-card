@@ -8,6 +8,7 @@
                 <li><a href="/cards/create">Create</a></li>
                 <li><a href="/cards/update">Modify</a></li>
                 <li><a href="/associations/index">Users</a></li>
+                <li><a href="/company/updateplan">Plan</a></li>
             </ul>
         </div>
         <div class="sect">

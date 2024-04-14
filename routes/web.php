@@ -63,6 +63,10 @@ Route::post('/cards/delete', [CardController::class, 'delete'])->middleware('con
 Route::get('/card/update/{card:id}', [CardController::class, 'showUpdate'])->middleware('connected');
 Route::post('/card/update', [CardController::class, 'update'])->middleware('connected');
 
+// Change company plan
+Route::get('/company/updateplan', [CompanyController::class, 'updatePlan'])->middleware('connected');
+Route::post('/company/updateplan', [CompanyController::class, 'storePlan'])->middleware('connected');
+
 // Create customer
 Route::get('/users/create', [CustomerController::class, 'create'])->middleware('connected');
 Route::post('/users/create', [CustomerController::class, 'store'])->middleware('connected');

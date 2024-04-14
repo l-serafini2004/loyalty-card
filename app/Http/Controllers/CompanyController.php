@@ -2,7 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Association;
+use App\Models\Card;
 use App\Models\Company;
+use App\Models\Customer;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Validation\ValidationException;
@@ -145,6 +148,66 @@ class CompanyController extends Controller
 
         return redirect('/')->with('success', 'Correctly log out from company');
 
+    }
+
+    public function updatePlan(){
+        return view('companies.updateplan');
+    }
+
+    public function storePlan(){
+
+        // Controlliamo che non sia lo stesso piano
+        if(auth()->user()->company->plan === request()->input('plan')){
+            throw ValidationException::withMessages([
+                'plan' => "You can't update your plan with itself"
+            ]);
+        }
+
+        // Verifichiamo che se discendiamo di abbonamento, non abbiamo raggiunto lo quote massime ...
+        $mapUsers = [
+            'free' => 500,
+            'premium' => 1500,
+            'business' => 5000
+        ];
+
+        $mapCards = [
+            'free' => 1,
+            'premium' => 3,
+            'business' => 5
+        ];
+
+        // ... di utenti ...
+        $assocs = Association::query()
+            ->join('cards', 'cards.id', '=', 'associations.card_id')
+            ->where('cards.company_id', '=', auth()->user()->company_id)
+            ->count();
+
+        if($assocs > $mapUsers[request()->input('plan')]){
+            throw ValidationException::withMessages([
+                'plan' => 'Your company has too many associations for this plan'
+            ]);
+        }
+
+        // ... e di carte
+        $cards = Card::query()
+            ->where('company_id', '=', auth()->user()->company_id)
+            ->count();
+
+        if($cards > $mapCards[request()->input('plan')]){
+            throw ValidationException::withMessages([
+                'plan' => 'Your company has too many cards for this plan'
+            ]);
+        }
+
+        // Se tutto va bene --> cambia
+        $companyToChange = Company::findOrFail(auth()->user()->company_id);
+
+        $companyToChange->update(
+            ['plan' => request()->input('plan')]
+        );
+        $companyToChange->save();
+
+        return redirect('/company/updateplan')->with('success', 'Your plan has been correctly changed');
     }
 
 }

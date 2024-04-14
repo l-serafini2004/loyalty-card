@@ -43,7 +43,7 @@ class CardController extends Controller
 
         if($numOfCard === $map[auth()->user()->company->plan]){
             throw ValidationException::withMessages([
-                'cardName' => 'Too many card created'
+                'cardName' => 'Too many cards created'
             ]);
         }
 
