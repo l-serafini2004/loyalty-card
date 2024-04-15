@@ -10,6 +10,7 @@ use App\Http\Controllers\CardController;
 use App\Http\Controllers\CustomerController;
 use App\Http\Controllers\AssociationController;
 use App\Http\Controllers\DocumentationController;
+use App\Http\Controllers\InformationController;
 
 /*
 |--------------------------------------------------------------------------
@@ -85,3 +86,6 @@ Route::get('/documentation/api', [DocumentationController::class, 'api'])->middl
 
 // ONLY CUSTOMERS PART
 Route::get('/mycards', [CustomerController::class, 'index']);
+
+// INFO PART
+Route::get('/information', [InformationController::class, 'index']);
