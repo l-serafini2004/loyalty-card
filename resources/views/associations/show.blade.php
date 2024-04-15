@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>User</title>
-    <link rel="stylesheet" href="../../style/associationsshow.css">
+    <title>Card Data</title>
+    <link rel="stylesheet" href="{{url('style/associationsshow.css')}}">
 </head>
 <body>
 <x-layout>

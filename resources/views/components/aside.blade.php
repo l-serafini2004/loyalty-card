@@ -46,4 +46,4 @@
 <!-- Font Awesome -->
 <script src="https://kit.fontawesome.com/d30b4a9354.js" crossorigin="anonymous"></script>
 
-<script src="../../script/components/aside.js"></script>
+<script src="{{url('script/components/aside.js')}}"></script>

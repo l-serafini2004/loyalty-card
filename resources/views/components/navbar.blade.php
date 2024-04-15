@@ -1,5 +1,5 @@
 <head>
-    <link rel="stylesheet" href="../style/components/navbar.css">
+    <link rel="stylesheet" href="{{url('style/components/navbar.css')}}">
 </head>
 
 <nav>

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Create a profile</title>
-    <link rel="stylesheet" href="style/manage.css">
+    <link rel="stylesheet" href="{{url('style/manage.css')}}">
 </head>
 <body>
 <main>

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Card update</title>
-    <link rel="stylesheet" href="../style/updatecard.css">
+    <link rel="stylesheet" href="{{url('style/updatecard.css')}}">
 </head>
     <x-layout>
         <main>
@@ -55,4 +55,4 @@
 
 </html>
 
-<script src="../script/updatecard.js"></script>
+<script src="{{url('script/updatecard.js')}}"></script>

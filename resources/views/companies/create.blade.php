@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="../style/company-create.css">
+    <link rel="stylesheet" href="{{url('style/company-create.css')}}">
     <title>Create Shop</title>
 </head>
 <body>
@@ -151,4 +151,4 @@
 </body>
 </html>
 
-<script src="script/company-create.js"></script>
+<script src="{{url('script/company-create.js')}}"></script>

@@ -1,6 +1,6 @@
 @if(session()->has('success'))
     <head>
-        <link rel="stylesheet" href="../style/components/flash.css">
+        <link rel="stylesheet" href="{{url('style/components/flash.css')}}">
     </head>
     <body>
         <div class="pup"  id="pop">
@@ -16,5 +16,5 @@
 
     <!-- Font Awesome -->
     <script src="https://kit.fontawesome.com/d30b4a9354.js" crossorigin="anonymous"></script>
-    <script src="../../script/components/flash.js"></script>
+    <script src="{{url('script/components/flash.js')}}"></script>
 @endif

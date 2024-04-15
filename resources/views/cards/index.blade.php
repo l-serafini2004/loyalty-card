@@ -101,4 +101,4 @@
 
 
 <!-- Script -->
-<script src="../script/showuser.js"></script>
+<script src="{{url('script/showuser.js')}}"></script>
