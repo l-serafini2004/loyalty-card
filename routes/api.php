@@ -9,6 +9,7 @@ use App\Http\Controllers\SessionControllerAPI;
 use App\Http\Controllers\CardControllerAPI;
 use App\Http\Controllers\AssociationControllerAPI;
 use App\Http\Controllers\CustomerControllerAPI;
+
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -56,6 +57,7 @@ Route::group(['middleware' => ['auth:sanctum']], function (){
 
     // Get info about customer
     Route::get('/customer/show', [CustomerControllerAPI::class, 'show']);
+
 
 });
 

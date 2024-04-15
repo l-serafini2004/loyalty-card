@@ -17,6 +17,13 @@
             </p>
         </article>
         <article>
+            <h2 id="license">License of use</h2>
+            <p>
+                You can freely use this application and APIs for your projects. If you want to maka a python app you can use the library that i created
+                for that
+            </p>
+        </article>
+        <article>
             <h2 id="price">Price</h2>
             <p>
                 Being a fake-project the prices are fake and only used to make the website more realistic. That's mean you can subscribe to all plan
@@ -24,7 +31,7 @@
             </p>
         </article>
         <article>
-            <h2 id="using-data">Using of data</h2>
+            <h2 id="using-data">Using of data/Cookies</h2>
             <p>
                 This website will not use your data (like email, phone number, etc...). You can obviously provide fake data during your subscription: this website
                 will never send to any account a mail (neither the correct subscription mail).

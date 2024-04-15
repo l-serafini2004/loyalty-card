@@ -26,6 +26,7 @@
             <li><a href="#association"><b>Association</b></a></li>
             <ul class="subcat">
                 <li><a href="#association-all">All</a></li>
+                <li><a href="#association-create">Create</a></li>
                 <li><a href="#association-update">Update points</a></li>
             </ul>
             <li><a href="#customer"><b>Customer</b></a></li>
@@ -130,6 +131,24 @@
                 </pre>
             </x-code-section>
             <p>You don't need to pass any parameters to get that.</p>
+            <h3 id="association-create">
+                Create
+            </h3>
+            <p>If you want to create an association (connect a user to a card of your company), you have to use this link:</p>
+            <x-code-section>
+                <pre>
+                    {{ $base_add . 'api/' }}association/store
+                </pre>
+            </x-code-section>
+            <p>You have to provide the email and the card_id, that you can get with the <b>Card/All</b> controller</p>
+            <x-code-section>
+                <pre>
+                    {
+                        "email":"emailOfUser",
+                        "card_id":[NUMBER]card_id
+                    }
+                </pre>
+            </x-code-section>
             <h3 id="association-update">
                 Update points
             </h3>

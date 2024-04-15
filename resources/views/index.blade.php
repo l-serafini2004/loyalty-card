@@ -25,9 +25,9 @@
             <div class="example">
                 <h4>Your Shop</h4>
                 <div class="card-info">
-                    <p>Mario Rossi</p>
+                    <p>John Doe</p>
                     <p>9982732934</p>
-                    <p>Mariorossi@mail.com</p>
+                    <p>j.doe@mail.com</p>
                     <p>12349837283294423</p>
                 </div>
             </div>
